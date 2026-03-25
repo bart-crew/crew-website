@@ -2116,7 +2116,7 @@ document.head.appendChild(o)}initApollo();</script>
   <h2>See what your team can't see<br>about itself.</h2>
   <p>Request a live demo. We'll run a diagnostic on your team's<br>behavioral profile and show you exactly what a top consulting firm<br>would charge to discover and delivered in days.</p>
   <div class="cta-btns" style="justify-content:center">
-    <a href="/cdn-cgi/l/email-protection#95fdf0f9f9fad5f6e7f0e2f4fbf4f9ece1fcf6e6bbf4fc" class="btn btn-white btn-lg">Request a Demo</a>
+    <a href="#contact" class="btn btn-white btn-lg">Request a Demo</a>
   </div>
 </div>
 
@@ -2159,7 +2159,7 @@ document.head.appendChild(o)}initApollo();</script>
       <div class="footer-col">
         <h5>Connect</h5>
         <ul>
-          <li><a href="/cdn-cgi/l/email-protection#6e060b0202012e0d1c0b190f000f02171a070d1d400f07">Contact Us</a></li>
+          <li><a href="mailto:hello@crewanalytics.com">Contact Us</a></li>
           <li><a href="#contact">Request a Demo</a></li>
         </ul>
       </div>
@@ -2172,7 +2172,7 @@ document.head.appendChild(o)}initApollo();</script>
 </footer>
 
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // Scroll reveal
 const obs = new IntersectionObserver(entries => {
   entries.forEach(e => {
@@ -2272,7 +2272,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Wire all demo/contact buttons to open modal
-document.querySelectorAll('a[href="#contact"], a[href="mailto:hello@crewanalytics.ai"]').forEach(btn => {
+document.querySelectorAll('a[href="#contact"], a[href^="mailto:hello@crewanalytics"]').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     openModal();
