@@ -1261,7 +1261,7 @@ document.head.appendChild(o)}initApollo();</script>
     </ul>
     <div class="nav-right">
       <a href="https://app.getcrew.io" class="btn btn-secondary btn-sm">Log In</a>
-      <a href="#contact" class="btn btn-primary btn-sm">Request a Demo</a>
+      <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary btn-sm">Request a Demo</a>
     </div>
   </div>
 </div>
@@ -1298,7 +1298,7 @@ document.head.appendChild(o)}initApollo();</script>
       <h1>Stop <span class="highlight">measuring</span><br>your team.<br>Start <span class="highlight">understanding</span> it.</h1>
       <p class="hero-sub">Crew Analytics replaces static surveys with AI-driven interviews that detect hidden tensions, predict behavioral risks, and deliver consultant-grade insights — in days, not months.</p>
       <div class="hero-cta">
-        <a href="#contact" class="btn btn-primary btn-lg">Request a Demo</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary btn-lg">Request a Demo</a>
         <a href="#how" class="btn btn-secondary btn-lg">See How It Works</a>
       </div>
     </div>
@@ -1878,7 +1878,7 @@ document.head.appendChild(o)}initApollo();</script>
           <li>Intelligence lost when the consultant walks out</li>
           <li>Cannot scale across multiple teams simultaneously</li>
         </ul>
-        <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center">Learn more</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-secondary" style="width:100%;justify-content:center">Learn more</a>
       </div>
       <div class="price-card featured">
         <div class="price-featured-badge">The Obvious Choice</div>
@@ -1898,7 +1898,7 @@ document.head.appendChild(o)}initApollo();</script>
           <li>AI-generated narrative report every cycle</li>
           <li>Causal chains, risk flags & intervention recommendations included</li>
         </ul>
-        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center">Get Started — $200/team/mo</a>
+        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="width:100%;justify-content:center">Get Started — $200/team/mo</a>
       </div>
     </div>
     <div class="pricing-callout reveal d3">
@@ -2116,7 +2116,7 @@ document.head.appendChild(o)}initApollo();</script>
   <h2>See what your team can't see<br>about itself.</h2>
   <p>Request a live demo. We'll run a diagnostic on your team's<br>behavioral profile and show you exactly what a top consulting firm<br>would charge to discover and delivered in days.</p>
   <div class="cta-btns" style="justify-content:center">
-    <a href="#contact" class="btn btn-white btn-lg">Request a Demo</a>
+    <a href="javascript:void(0)" onclick="openModal()" class="btn btn-white btn-lg">Request a Demo</a>
   </div>
 </div>
 
@@ -2160,7 +2160,7 @@ document.head.appendChild(o)}initApollo();</script>
         <h5>Connect</h5>
         <ul>
           <li><a href="mailto:hello@getcrew.io">Contact Us</a></li>
-          <li><a href="#contact">Request a Demo</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal()">Request a Demo</a></li>
         </ul>
       </div>
     </div>
@@ -2186,8 +2186,8 @@ setTimeout(() => {
   document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
 }, 400);
 
-// Smooth nav scroll (skip #contact — handled by modal)
-document.querySelectorAll('a[href^="#"]:not([href="#contact"])').forEach(a => {
+// Smooth nav scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
     if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
@@ -2269,14 +2269,6 @@ document.getElementById('contactModal').addEventListener('click', function(e) {
 // Close on Escape
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
-});
-
-// Wire all demo/contact buttons to open modal
-document.querySelectorAll('a[href="#contact"]').forEach(btn => {
-  btn.addEventListener('click', function(e) {
-    e.preventDefault();
-    openModal();
-  });
 });
 
 // Handle form submission
