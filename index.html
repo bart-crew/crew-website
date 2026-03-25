@@ -2159,7 +2159,7 @@ document.head.appendChild(o)}initApollo();</script>
       <div class="footer-col">
         <h5>Connect</h5>
         <ul>
-          <li><a href="mailto:hello@crewanalytics.com">Contact Us</a></li>
+          <li><a href="mailto:hello@getcrew.io">Contact Us</a></li>
           <li><a href="#contact">Request a Demo</a></li>
         </ul>
       </div>
@@ -2186,8 +2186,8 @@ setTimeout(() => {
   document.querySelectorAll('.reveal:not(.in)').forEach(el => el.classList.add('in'));
 }, 400);
 
-// Smooth nav scroll
-document.querySelectorAll('a[href^="#"]').forEach(a => {
+// Smooth nav scroll (skip #contact — handled by modal)
+document.querySelectorAll('a[href^="#"]:not([href="#contact"])').forEach(a => {
   a.addEventListener('click', e => {
     const t = document.querySelector(a.getAttribute('href'));
     if (t) { e.preventDefault(); window.scrollTo({ top: t.offsetTop - 80, behavior: 'smooth' }); }
@@ -2272,7 +2272,7 @@ document.addEventListener('keydown', function(e) {
 });
 
 // Wire all demo/contact buttons to open modal
-document.querySelectorAll('a[href="#contact"], a[href^="mailto:hello@crewanalytics"]').forEach(btn => {
+document.querySelectorAll('a[href="#contact"]').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
     openModal();
