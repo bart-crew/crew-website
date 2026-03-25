@@ -1235,6 +1235,18 @@ footer {
 o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
 o.onload=function(){window.trackingFunctions.onLoad({appId:"682ded539bf95600214312f1"})},
 document.head.appendChild(o)}initApollo();</script>
+
+<!-- Modal open/close (defined early so onclick handlers work immediately) -->
+<script>
+function openModal() {
+  document.getElementById('contactModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('contactModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
+</script>
 </head>
 <body>
 
@@ -2159,7 +2171,7 @@ document.head.appendChild(o)}initApollo();</script>
       <div class="footer-col">
         <h5>Connect</h5>
         <ul>
-          <li><a href="mailto:hello@getcrew.io">Contact Us</a></li>
+          <li><a href="javascript:void(0)" onclick="openModal()">Contact Us</a></li>
           <li><a href="javascript:void(0)" onclick="openModal()">Request a Demo</a></li>
         </ul>
       </div>
@@ -2253,15 +2265,6 @@ window.addEventListener('scroll', () => {
 </div>
 
 <script>
-// Modal open/close
-function openModal() {
-  document.getElementById('contactModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('contactModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
 // Close on overlay click
 document.getElementById('contactModal').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
