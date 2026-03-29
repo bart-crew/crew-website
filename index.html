@@ -3,7 +3,90 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Crew Analytics — AI-Powered Team Intelligence</title>
+
+<!-- ═══ PRIMARY META ═══ -->
+<title>Crew Analytics — AI-Powered Team Intelligence Platform</title>
+<meta name="description" content="Crew Analytics is an AI-powered team intelligence platform that replaces static surveys with behavioral diagnostics. Get consultant-grade insights on your team in days, not months — for a fraction of the cost."/>
+<meta name="robots" content="index, follow"/>
+<link rel="canonical" href="https://www.crewanalytics.com/"/>
+
+<!-- ═══ FAVICON ═══ -->
+<link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+<link rel="alternate icon" href="/favicon.ico"/>
+
+<!-- ═══ OPEN GRAPH ═══ -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://www.crewanalytics.com/"/>
+<meta property="og:title" content="Crew Analytics — AI-Powered Team Intelligence Platform"/>
+<meta property="og:description" content="Everything a top-tier management consultant discovers about your team — hidden tensions, behavioral blind spots, risks no one is talking about — delivered automatically, in days, for a fraction of the cost."/>
+<meta property="og:image" content="https://www.crewanalytics.com/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:site_name" content="Crew Analytics"/>
+<meta property="og:locale" content="en_US"/>
+
+<!-- ═══ TWITTER / X CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@crewanalytics"/>
+<meta name="twitter:title" content="Crew Analytics — AI-Powered Team Intelligence Platform"/>
+<meta name="twitter:description" content="Everything a top-tier management consultant discovers about your team — delivered automatically, in days, for a fraction of the cost."/>
+<meta name="twitter:image" content="https://www.crewanalytics.com/og-image.png"/>
+
+<!-- ═══ JSON-LD STRUCTURED DATA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.crewanalytics.com/#organization",
+      "name": "Crew Analytics",
+      "url": "https://www.crewanalytics.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.crewanalytics.com/favicon.svg"
+      },
+      "description": "Crew Analytics is an AI-powered team intelligence platform built on peer-reviewed behavioral science. It replaces static surveys with AI-driven diagnostics that surface hidden tensions, predict risks, and recommend interventions — in days.",
+      "sameAs": [
+        "https://www.getcrew.io"
+      ]
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://www.crewanalytics.com/#software",
+      "name": "Crew Analytics",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Web",
+      "url": "https://www.crewanalytics.com",
+      "description": "AI-powered behavioral team intelligence platform. Diagnoses hidden team dynamics, classifies team archetypes, and delivers consultant-grade insights in 5 days.",
+      "offers": {
+        "@type": "Offer",
+        "price": "200",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "200",
+          "priceCurrency": "USD",
+          "unitText": "per team per month"
+        }
+      },
+      "provider": {
+        "@id": "https://www.crewanalytics.com/#organization"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.crewanalytics.com/#website",
+      "url": "https://www.crewanalytics.com",
+      "name": "Crew Analytics",
+      "publisher": {
+        "@id": "https://www.crewanalytics.com/#organization"
+      }
+    }
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
@@ -297,11 +380,13 @@ h4 {
   font-size: 13px; font-weight: 600;
   color: var(--text-secondary);
 }
-.hero h1 {
+.hero h2 {
   margin-bottom: 22px;
   color: var(--navy);
+  font-size: clamp(40px, 5.5vw, 58px);
+  letter-spacing: -.025em;
 }
-.hero h1 .highlight {
+.hero h2 .highlight {
   color: var(--purple);
   position: relative;
 }
@@ -1229,28 +1314,13 @@ footer {
 .modal-success h4 { font-size: 20px; margin-bottom: 8px; }
 .modal-success p { font-size: 14px; color: var(--text-secondary); }
 </style>
-
-<!-- Apollo.io Website Visitor Tracking -->
-<script>function initApollo(){var n=Math.random().toString(36).substring(7),o=document.createElement("script");
-o.src="https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache="+n,o.async=!0,o.defer=!0,
-o.onload=function(){window.trackingFunctions.onLoad({appId:"682ded539bf95600214312f1"})},
-document.head.appendChild(o)}initApollo();</script>
-
-<!-- Modal open/close (defined early so onclick handlers work immediately) -->
-<script>
-function openModal() {
-  document.getElementById('contactModal').classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeModal() {
-  document.getElementById('contactModal').classList.remove('open');
-  document.body.style.overflow = '';
-}
-</script>
 </head>
 <body>
 
+<header role="banner">
 <!-- ━━━━━━━━━━━━ NAVIGATION ━━━━━━━━━━━━ -->
+<a href="#main-content" style="position:absolute;left:-9999px;top:0;z-index:9999;background:var(--purple);color:#fff;padding:8px 16px;font-family:var(--f-head);font-size:13px;font-weight:600;border-radius:0 0 8px 0" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to main content</a>
+<nav role="navigation" aria-label="Main navigation">
 <div class="nav-wrap">
   <div class="nav-inner">
     <a href="#" class="nav-logo">
@@ -1273,11 +1343,14 @@ function closeModal() {
     </ul>
     <div class="nav-right">
       <a href="https://app.getcrew.io" class="btn btn-secondary btn-sm">Log In</a>
-      <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary btn-sm">Request a Demo</a>
+      <a href="#contact" class="btn btn-primary btn-sm">Request a Demo</a>
     </div>
   </div>
 </div>
+</nav>
+</header>
 
+<main id="main-content">
 
 <!-- ━━━━━━━━━━━━ SPLASH BANNER ━━━━━━━━━━━━ -->
 <section class="splash-banner">
@@ -1307,10 +1380,10 @@ function closeModal() {
         </div>
         <span>AI-Powered Team Intelligence</span>
       </div>
-      <h1>Stop <span class="highlight">measuring</span><br>your team.<br>Start <span class="highlight">understanding</span> it.</h1>
+      <h2>Stop <span class="highlight">measuring</span><br>your team.<br>Start <span class="highlight">understanding</span> it.</h2>
       <p class="hero-sub">Crew Analytics replaces static surveys with AI-driven interviews that detect hidden tensions, predict behavioral risks, and deliver consultant-grade insights — in days, not months.</p>
       <div class="hero-cta">
-        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary btn-lg">Request a Demo</a>
+        <a href="#contact" class="btn btn-primary btn-lg">Request a Demo</a>
         <a href="#how" class="btn btn-secondary btn-lg">See How It Works</a>
       </div>
     </div>
@@ -1890,7 +1963,7 @@ function closeModal() {
           <li>Intelligence lost when the consultant walks out</li>
           <li>Cannot scale across multiple teams simultaneously</li>
         </ul>
-        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-secondary" style="width:100%;justify-content:center">Learn more</a>
+        <a href="#contact" class="btn btn-secondary" style="width:100%;justify-content:center">Learn more</a>
       </div>
       <div class="price-card featured">
         <div class="price-featured-badge">The Obvious Choice</div>
@@ -1910,7 +1983,7 @@ function closeModal() {
           <li>AI-generated narrative report every cycle</li>
           <li>Causal chains, risk flags & intervention recommendations included</li>
         </ul>
-        <a href="javascript:void(0)" onclick="openModal()" class="btn btn-primary" style="width:100%;justify-content:center">Get Started — $200/team/mo</a>
+        <a href="#contact" class="btn btn-primary" style="width:100%;justify-content:center">Get Started — $200/team/mo</a>
       </div>
     </div>
     <div class="pricing-callout reveal d3">
@@ -2128,13 +2201,14 @@ function closeModal() {
   <h2>See what your team can't see<br>about itself.</h2>
   <p>Request a live demo. We'll run a diagnostic on your team's<br>behavioral profile and show you exactly what a top consulting firm<br>would charge to discover and delivered in days.</p>
   <div class="cta-btns" style="justify-content:center">
-    <a href="javascript:void(0)" onclick="openModal()" class="btn btn-white btn-lg">Request a Demo</a>
+    <a href="mailto:hello@crewanalytics.ai" class="btn btn-white btn-lg">Request a Demo</a>
   </div>
 </div>
 
+</main>
 
 <!-- ━━━━━━━━━━━━ FOOTER ━━━━━━━━━━━━ -->
-<footer>
+<footer role="contentinfo">
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
@@ -2171,8 +2245,8 @@ function closeModal() {
       <div class="footer-col">
         <h5>Connect</h5>
         <ul>
-          <li><a href="javascript:void(0)" onclick="openModal()">Contact Us</a></li>
-          <li><a href="javascript:void(0)" onclick="openModal()">Request a Demo</a></li>
+          <li><a href="mailto:hello@crewanalytics.ai">Contact Us</a></li>
+          <li><a href="#contact">Request a Demo</a></li>
         </ul>
       </div>
     </div>
@@ -2265,6 +2339,15 @@ window.addEventListener('scroll', () => {
 </div>
 
 <script>
+// Modal open/close
+function openModal() {
+  document.getElementById('contactModal').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('contactModal').classList.remove('open');
+  document.body.style.overflow = '';
+}
 // Close on overlay click
 document.getElementById('contactModal').addEventListener('click', function(e) {
   if (e.target === this) closeModal();
@@ -2272,6 +2355,14 @@ document.getElementById('contactModal').addEventListener('click', function(e) {
 // Close on Escape
 document.addEventListener('keydown', function(e) {
   if (e.key === 'Escape') closeModal();
+});
+
+// Wire all demo/contact buttons to open modal
+document.querySelectorAll('a[href="#contact"], a[href="mailto:hello@crewanalytics.ai"]').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+    openModal();
+  });
 });
 
 // Handle form submission
@@ -2290,4 +2381,14 @@ document.getElementById('demoForm').addEventListener('submit', async function(e)
       document.getElementById('modalForm').style.display = 'none';
       document.getElementById('modalSuccess').style.display = 'block';
     } else {
-      btn.textContent = 'Some
+      btn.textContent = 'Something went wrong — try again';
+      btn.disabled = false;
+    }
+  } catch {
+    btn.textContent = 'Something went wrong — try again';
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>
